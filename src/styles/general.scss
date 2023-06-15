@@ -1,0 +1,15 @@
+@use './partials/mixins.scss' as *;
+@use './partials/variables.scss' as *;
+
+*,
+*::before,
+*::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: $primaryColor;
+}
