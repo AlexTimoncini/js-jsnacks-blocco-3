@@ -1,13 +1,54 @@
 <script>
-
+    import NavLink from './NavLink.vue';
+    export default{
+        name: 'HeaderApp',
+        components: {
+            NavLink,
+        },
+        data(){
+            return{
+                links: [
+                    {
+                        name: 'Home',
+                        link: '#'
+                    },
+                    {
+                        name: 'About',
+                        link: '#'
+                    },
+                    {
+                        name: 'Shop',
+                        link: '#'
+                    },
+                    {
+                        name: 'Contact Us',
+                        link: '#'
+                    },
+                    {
+                        name: 'Gallery',
+                        link: '#'
+                    },
+                    {
+                        name: 'Team',
+                        link: '#'
+                    },
+                    {
+                        name: 'API',
+                        link: '#'
+                    },
+                ]
+            }
+        }
+    }
 </script>
 
 <template>
     <header>
         <h1>Main Logo</h1>
         <nav>
-            <ul v-for="n in 4">
-                <li>Home</li>
+            <ul>
+                <NavLink v-for="link in links" 
+                :linkObj="link"/>
             </ul>
         </nav>
     </header>
