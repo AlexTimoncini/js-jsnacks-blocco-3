@@ -44,7 +44,6 @@
 
 <template>
     <header>
-        <h1>Main Logo</h1>
         <nav>
             <ul>
                 <NavLink v-for="link in links" 
@@ -59,5 +58,13 @@
     @use '../styles/partials/variables.scss' as *;
     header{
         background-color: $primaryColor;
+        height: 100vh;
+        @include flex();
+        ul{
+            width: 100vw;
+            list-style: none;
+            text-align: center;
+            overflow: hidden;
+        }
     }
 </style>
